@@ -5,3 +5,4 @@ pandas
 scikit-learn
 gunicorn
 Pillow==10.4.0
+pytesseract
