@@ -1,8 +1,10 @@
 flask
 flask-cors
+gunicorn
 numpy
 pandas
 scikit-learn
-gunicorn
 Pillow==10.4.0
 pytesseract
+PyPDF2
+google-generativeai
