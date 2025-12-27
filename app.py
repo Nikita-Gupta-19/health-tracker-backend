@@ -365,4 +365,9 @@ if __name__ == "__main__":
         port=5000,
         debug=False,
         use_reloader=False
+
     )
+
+@app.route("/healthz")
+def healthz():
+    return "ok",200
