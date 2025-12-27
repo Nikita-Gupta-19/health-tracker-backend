@@ -4,3 +4,5 @@ numpy
 pandas
 scikit-learn
 gunicorn
+Pillow==10.2.0
+
