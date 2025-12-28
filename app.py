@@ -11,6 +11,9 @@ import google.generativeai as genai
 import threading
 import json
 
+pytesseract.pytesseract.tesseract_cmd="/usr/bin/tesseract"
+
+
 # -----------------------------
 # Initialize Flask app
 # -----------------------------
@@ -371,3 +374,4 @@ if __name__ == "__main__":
 @app.route("/healthz")
 def healthz():
     return "ok",200
+
