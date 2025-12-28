@@ -375,3 +375,10 @@ if __name__ == "__main__":
 def healthz():
     return "ok",200
 
+@app.route("/analyze-report-text",methods=["POST"])
+def analyze_report_text():
+    text=request.json.get("text","")
+    return jsonify({"analysis":process_report_text(text)})
+
+
+
