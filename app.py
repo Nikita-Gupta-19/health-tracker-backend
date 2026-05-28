@@ -164,7 +164,7 @@ Return ONLY valid JSON in this format:
 
         t = threading.Thread(target=run_gemini)
         t.start()
-        t.join(timeout=25)  # 25 second timeout
+        t.join(timeout=60)  # 60 second timeout
 
         if t.is_alive():
             return jsonify({"error": "AI request timed out. Please try again."}), 504
@@ -267,7 +267,7 @@ REPORT:
 
     t = threading.Thread(target=run_gemini)
     t.start()
-    t.join(timeout=25)   # ⏱ 25 second hard limit
+    t.join(timeout=60)   # ⏱ 60 second hard limit
 
     if t.is_alive():
         return jsonify({"error": "Gemini request timed out. Please try again."}), 504
@@ -346,7 +346,7 @@ REPORT:
 
         t = threading.Thread(target=run_gemini)
         t.start()
-        t.join(timeout=25)
+        t.join(timeout=60)
 
         if t.is_alive():
             return jsonify({"error": "Gemini request timed out. Please try again."}), 504
@@ -421,7 +421,7 @@ Format your response in plain text or simple markdown (avoiding complex blocks).
 
         t = threading.Thread(target=run_gemini)
         t.start()
-        t.join(timeout=30)
+        t.join(timeout=60)
 
         if t.is_alive():
             return jsonify({"error": "AI response timed out"}), 504
